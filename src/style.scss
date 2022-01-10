@@ -1,0 +1,78 @@
+$primary-color : rgb(139, 75, 75);
+$secondary-color : violet;
+$tertiary-color : rgb(41, 29, 29);
+$background : #eee;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Sans', sans-serif;
+}
+body {
+    background-image: url('./assets/background.jpg');
+}
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 16px;
+}
+.calculator {
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 67px rgba(0, 0, 0, 0.2);
+}
+.display {
+    padding: 16px;
+    text-align: right;
+    background-color: $tertiary-color;
+    color: $background;
+    font-size: 24px;
+    font-weight: 300;
+
+    span {
+        font-size: 14px;
+        color: #888;
+        padding-right: 5px;
+    }
+}
+button {
+    appearance: none;
+    border: none;
+    outline: none;
+    color: #FFF;
+    font-size: 20px;
+    padding: 16px;
+    cursor: pointer;
+    transition: .4s;
+
+    &:hover {
+        opacity: .9;
+    }
+}
+.operators {
+    display: flex;
+    flex-wrap: wrap;
+
+    button {
+        flex: 1 1 33.333%;
+        max-width: 33.333%;
+        background-color: $primary-color;
+        font-weight: 700;
+    }
+}
+.digits {
+    display: flex;
+    flex-wrap: wrap;
+
+    button {
+        flex: 1 1 33.333%;
+        max-width: 33.333%;
+        background-color: $tertiary-color;
+    }
+}
